@@ -1,0 +1,12 @@
+{
+	"ImportPath": "fileserver",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Deps": [
+		{
+			"ImportPath": "github.com/russross/blackfriday",
+			"Comment": "v1.5.1-4-g46c73eb",
+			"Rev": "46c73eb196baff5bb07288f245b223bd1a30fba6"
+		}
+	]
+}
