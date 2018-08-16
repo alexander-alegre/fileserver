@@ -1,12 +1,22 @@
 package main
 
-import "net/http"
-import "github.com/russross/blackfriday"
+import (
+	"net/http"
+	"os"
+
+	"github.com/russross/blackfriday"
+)
 
 func main() {
+	port := os.Getenv("PORT")
+
+	if port == "" {
+		port = "8080"
+	}
+
 	http.HandleFunc("/markdown", GenerateMarkdown)
 	http.Handle("/", http.FileServer(http.Dir("public")))
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":"+port, nil)
 }
 
 // GenerateMarkdown is a func
