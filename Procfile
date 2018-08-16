@@ -1,1 +1,1 @@
-web: deployment
+web: fileserver
